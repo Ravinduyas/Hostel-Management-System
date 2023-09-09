@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="898.0" prefWidth="1382.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostelsystem.controller.DashboardFormController">
+    <children>
+        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="519.0" layoutY="20.0" onAction="#reservationOnAction" prefHeight="84.0" prefWidth="245.0" ripplerFill="#ffffffbf" style="-fx-background-color: black; -fx-background-radius: 25;" text="Reservation" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></JFXButton>
+        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="18.0" layoutX="802.0" layoutY="20.0" onAction="#studentsOnAction" prefHeight="84.0" prefWidth="201.0" ripplerFill="#000000be" style="-fx-background-color: black; -fx-background-radius: 25;" text="Students" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="25.0" layoutX="1037.0" layoutY="20.0" onAction="#roomsOnAction" prefHeight="84.0" prefWidth="201.0" ripplerFill="#000000be" style="-fx-background-color: black; -fx-background-radius: 25;" text="Rooms" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1201.0" layoutY="833.0" onAction="#signOutOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: red; -fx-border-color: white;" text="Log Out" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1089.0" layoutY="833.0" onAction="#setttingsOnAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-color: white;" text="Settings" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </JFXButton>
+        <Label fx:id="lblTime" layoutX="40.0" layoutY="853.0" prefHeight="31.0" prefWidth="465.0" text="time" textFill="#252424">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="loadPane" layoutX="40.0" layoutY="138.0" prefHeight="690.0" prefWidth="1254.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+          <Label fx:id="studentCount" layoutX="926.0" layoutY="26.0" prefHeight="40.0" prefWidth="59.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="00" textAlignment="CENTER">
+              <font>
+                  <Font name="System Bold" size="50.0" />
+              </font>
+          </Label>
+          <Label fx:id="roomsCount" layoutX="1149.0" layoutY="26.0" prefHeight="73.0" prefWidth="59.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="00" textAlignment="CENTER">
+              <font>
+                  <Font name="System Bold" size="50.0" />
+              </font>
+          </Label>
+          <Label fx:id="ReservationCount" layoutX="674.0" layoutY="27.0" prefHeight="72.0" prefWidth="59.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="00" textAlignment="RIGHT">
+              <font>
+                  <Font name="System Bold" size="50.0" />
+              </font>
+          </Label>
+    </children>
+</AnchorPane>

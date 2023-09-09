@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="726.0" prefWidth="1251.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostelsystem.controller.ReservationFormController">
+    <children>
+        <JFXButton layoutX="75.0" layoutY="37.0" onAction="#makeReservationVisibleOnAction" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #C0C0C0;" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton layoutX="185.0" layoutY="37.0" onAction="#updateReservationVisibleOnAction" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #C0C0C0;" text="Upadate">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton layoutX="313.0" layoutY="37.0" onAction="#deleteReservationVisibleOnAction" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #C0C0C0;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXTextField fx:id="txtReservationId" focusColor="BLACK" labelFloat="true" layoutX="52.0" layoutY="106.0" prefHeight="29.0" prefWidth="368.0" promptText="Reservation ID" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXComboBox fx:id="cmbStudentId" focusColor="BLACK" labelFloat="true" layoutX="52.0" layoutY="164.0" onAction="#cmbStudentOnAction" prefHeight="27.0" prefWidth="187.0" promptText="Student ID" unFocusColor="WHITE" />
+        <JFXComboBox fx:id="cmbRoomID" focusColor="BLACK" labelFloat="true" layoutX="52.0" layoutY="214.0" onAction="#cmbRoomOnAction" prefHeight="27.0" prefWidth="187.0" promptText="Room ID" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtStudentName" focusColor="BLACK" labelFloat="true" layoutX="292.0" layoutY="164.0" prefHeight="27.0" prefWidth="174.0" promptText="Student Name" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtRoomQty" focusColor="BLACK" labelFloat="true" layoutX="292.0" layoutY="207.0" prefHeight="27.0" prefWidth="174.0" promptText="Room Qty" unFocusColor="WHITE" />
+        <JFXButton fx:id="dltReserveOnAction" layoutX="388.0" layoutY="261.0" onAction="#dltOnAction" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="updateReserveOnAction" layoutX="292.0" layoutY="260.0" onAction="#updateOnAction" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: yellow;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="reserveOnAction" layoutX="193.0" layoutY="261.0" onAction="#reserveOnAction" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: green;" text="Reserve" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <TableView fx:id="tblNotPayed" layoutX="16.0" layoutY="344.0" prefHeight="292.0" prefWidth="558.0" style="-fx-background-color: lightblue;">
+            <columns>
+                <TableColumn fx:id="colReserveID" prefWidth="118.0" text="Reservation ID" />
+                <TableColumn fx:id="colRoomID" prefWidth="85.0" text="Room ID" />
+                <TableColumn fx:id="colStudentID" prefWidth="85.0" text="Student ID" />
+                <TableColumn fx:id="colStudentName" minWidth="0.0" prefWidth="7.0" text="Student Name" />
+                <TableColumn fx:id="colContact" prefWidth="146.0" text="Contact" />
+                <TableColumn fx:id="colPDate" prefWidth="111.0" text="Date" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tblReservation" layoutX="617.0" layoutY="64.0" prefHeight="577.0" prefWidth="590.0" style="-fx-background-color: lightblue;">
+            <columns>
+                <TableColumn fx:id="colReserveId" prefWidth="99.0" text="Reserve ID" />
+                <TableColumn fx:id="colDate" prefWidth="113.0" text="Date" />
+                <TableColumn fx:id="colStudentId" prefWidth="113.0" text="Student ID" />
+                <TableColumn fx:id="colRoomTypeID" prefWidth="137.0" text="Room Type ID" />
+                <TableColumn fx:id="colKeyMoney" prefWidth="125.0" text="Key Money" />
+            </columns>
+        </TableView>
+        <JFXCheckBox fx:id="cbxStatus" checkedColor="#b20303" layoutX="52.0" layoutY="266.0" text="Key Money" unCheckedColor="RED" />
+        <Label layoutX="24.0" layoutY="315.0" text="Un-paid students : ">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+      <Separator layoutX="14.0" layoutY="95.0" prefHeight="1.0" prefWidth="466.0" />
+    </children>
+</AnchorPane>

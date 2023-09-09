@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentPane" opacity="0.8" prefHeight="791.0" prefWidth="1299.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.d24hostelsystem.controller.StudentFormController">
+    <children>
+        <JFXButton buttonType="RAISED" layoutX="1242.0" layoutY="21.0" lineSpacing="1.0" onAction="#goBackOnAction" prefHeight="79.0" prefWidth="30.0" ripplerFill="#ff4949" style="-fx-background-color: gray;" text="..._&#10;_&#10;_&#10;_" textAlignment="CENTER" textFill="#f2eeee">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXTextField fx:id="txtStudentName" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="127.0" prefHeight="29.0" prefWidth="230.0" promptText="full Name" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtStudentId" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="64.0" prefHeight="29.0" prefWidth="230.0" promptText="student ID" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtStudentNic" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="194.0" prefHeight="29.0" prefWidth="230.0" promptText="N.I.C." unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtStudentHomeTown" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="262.0" prefHeight="29.0" prefWidth="230.0" promptText="home Town" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <JFXDatePicker fx:id="txtStudentDob" defaultColor="BLACK" layoutX="72.0" layoutY="324.0" prefHeight="27.0" prefWidth="230.0" promptText="Date Of Birth" />
+        <JFXComboBox fx:id="cmbStudentGender" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="387.0" prefHeight="27.0" prefWidth="230.0" promptText="gender" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtStudentPhoneNumber" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="457.0" prefHeight="29.0" prefWidth="230.0" promptText="Phone Number" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <Label layoutX="943.0" layoutY="30.0" text="Student Management">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXButton layoutX="420.0" layoutY="64.0" onAction="#addStudentVisibleOnAction" prefHeight="31.0" prefWidth="96.0" ripplerFill="#ae0c0c" style="-fx-background-color: #C0C0C0;" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton layoutX="420.0" layoutY="112.0" onAction="#updateStudentVisibleOnAction" prefHeight="31.0" prefWidth="96.0" ripplerFill="#ae0c0c" style="-fx-background-color: #C0C0C0;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton layoutX="420.0" layoutY="158.0" onAction="#deleteStudentVisibleOnAction" prefHeight="31.0" prefWidth="96.0" ripplerFill="#ae0c0c" style="-fx-background-color: #C0C0C0;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXTextField fx:id="txtStudentUniversity" focusColor="#c90707" labelFloat="true" layoutX="72.0" layoutY="523.0" prefHeight="29.0" prefWidth="230.0" promptText="University" unFocusColor="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXTextField>
+        <Line endX="144.0" endY="-50.0" layoutX="256.0" layoutY="64.0" startX="144.0" startY="704.0" />
+        <JFXButton fx:id="btnSaveStudent" layoutX="29.0" layoutY="608.0" onAction="#saveStudentOnAction" prefHeight="56.0" prefWidth="81.0" ripplerFill="#d7d7d7" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="btnSearchStudent" layoutX="420.0" layoutY="210.0" onAction="#searchStudentOnAction" prefHeight="30.0" prefWidth="96.0" ripplerFill="#ae0c0c" style="-fx-background-color: yellow;" text="Search">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="btnUpdateStudent" layoutX="120.0" layoutY="608.0" onAction="#updateStudentOnAction" prefHeight="56.0" prefWidth="81.0" ripplerFill="#c9c9c9" style="-fx-background-color: magenta;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="btnClear" layoutX="303.0" layoutY="608.0" onAction="#clearOnAction" prefHeight="56.0" prefWidth="81.0" ripplerFill="#d7d7d7" style="-fx-background-color: white;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <JFXButton fx:id="btnDeleteStudent" layoutX="210.0" layoutY="608.0" onAction="#deleteStudentOnAction" prefHeight="56.0" prefWidth="81.0" ripplerFill="#b9b9b9" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+        <TableView fx:id="tblStudents" editable="true" layoutX="600.0" layoutY="109.0" prefHeight="646.0" prefWidth="672.0" style="-fx-background-color: lightblue;">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="Student ID" />
+                <TableColumn fx:id="colName" prefWidth="89.0" text="Name" />
+                <TableColumn fx:id="colNIC" prefWidth="87.0" text="NIC" />
+                <TableColumn fx:id="colAddress" prefWidth="101.0" text="Home Town" />
+                <TableColumn fx:id="colGender" prefWidth="66.0" text="Gender" />
+                <TableColumn fx:id="colPhoneNum" prefWidth="147.0" text="Phone Number" />
+                <TableColumn fx:id="colUniversity" prefWidth="106.0" text="University" />
+            </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </TableView>
+    </children>
+</AnchorPane>
